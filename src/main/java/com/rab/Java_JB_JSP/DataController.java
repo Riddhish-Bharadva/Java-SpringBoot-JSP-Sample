@@ -1,13 +1,16 @@
 package com.rab.Java_JB_JSP;
 
 import java.util.*;
+
+import javax.ws.rs.core.MediaType;
+
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value="/DataController", consumes="application/json")
 public class DataController {
 	private static List<Data> datas = new ArrayList<Data>(); // Using list to store all the data passed into API.
-	@PostMapping
+	@PostMapping(produces=MediaType.APPLICATION_JSON)
 	public String Data(@RequestBody Data data) // Here, class Data will handle all JSON data and map columns accordingly.
 	{
 		datas.add(data);
