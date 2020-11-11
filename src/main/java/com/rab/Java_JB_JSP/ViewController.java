@@ -10,7 +10,7 @@ public class ViewController {
 	@RequestMapping(value="/ViewController")
 	public ModelAndView LandingPage() throws Exception
 	{
-		System.out.println("Inside View Controller.");
+		System.out.println("Inside View Controller");
 		ModelAndView MAV = new ModelAndView();
 		MAV.setViewName("ViewData");
 		MAV.addObject("Data", DC.GetData());
